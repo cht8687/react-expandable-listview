@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ReactListView from '..';
+import ReactExpandableListView from '..';
 
 let styles = {
   outerDiv: {
@@ -24,7 +24,7 @@ let styles = {
   listHeader: {
     width: '383px',
     height: '20px',
-    background: 'green',
+    background: 'orange',
     color: 'white'
   },
 
@@ -41,7 +41,7 @@ class App extends Component {
   render() {
    const { data } = this.props;
     return (
-      <ReactListView 
+      <ReactExpandableListView 
         data={data} 
         headerAttName="headerName"
         itemsAttName="items" 
