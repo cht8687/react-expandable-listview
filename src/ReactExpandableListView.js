@@ -8,10 +8,6 @@ export default class ReactListView extends Component {
     headerAttName: PropTypes.string.isRequired,
     itemsAttName: PropTypes.string.isRequired,
     styles: PropTypes.object.isRequired,
-    events: PropTypes.array,
-    _positionMap: PropTypes.object,
-    _topPos: PropTypes.string,
-    _topWrapper: PropTypes.object
   }
 
   constructor(props) {
@@ -28,15 +24,6 @@ export default class ReactListView extends Component {
 
   componentDidUpdate() {
 
-  }
-
-  refsToArray(ctx, prefix) {
-    let results = [];
-    for (let i=0;;i++) {
-      let ref = ctx.refs[prefix + '-' + String(i)];
-      if (ref) results.push(ref);
-      else return results;
-    }
   }
 
   render() {
