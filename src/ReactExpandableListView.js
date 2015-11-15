@@ -47,6 +47,7 @@ export default class ReactListView extends Component {
               ref={makeRef()}
               header={header}
               styles={listHeader}
+              handleToggle={this.handleToggle.bind(this, header)}
             />
             <ListItems
              items={items}
@@ -59,5 +60,9 @@ export default class ReactListView extends Component {
       </ul>
       </div>
     );
+  }
+
+  handleToggle(header) {
+    console.log(header);
   }
 }
