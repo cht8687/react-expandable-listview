@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ListHeader from './lib/ListHeader';
 import ListItems from './lib/ListItems';
+import * as Tools from './lib/Utility';
 
 export default class ReactListView extends Component {
   static propTypes = {
@@ -51,7 +52,7 @@ export default class ReactListView extends Component {
         const itemRef = makeItemRef();
 
         return (
-          <li li={li} key={k}>    
+          <li li={li} key={k}>
             <ListHeader
               ref={headerRef}
               header={header}
@@ -74,7 +75,7 @@ export default class ReactListView extends Component {
   }
 
   handleToggle(headerRef) {
-    console.log(headerRef);
+    console.log(Tools.returnListRef(headerRef));
 
   }
 }
