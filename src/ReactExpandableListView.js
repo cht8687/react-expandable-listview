@@ -29,9 +29,14 @@ export default class ReactListView extends Component {
   render() {
     const { data, headerAttName, itemsAttName } = this.props;
     const { styles: {outerDiv, ul, listHeader, listItems, li} } = this.props;
+
     let _refi = 0;
-    let makeRef = () => {
-      return `ListHeader-${_refi++}`;
+    let makeHeaderRef = () => {
+      return `ListHeader-${_refi}`;
+    };
+
+    let makeItemRef = () => {
+      return `ListItem-${_refi}`;
     };
 
     return (
@@ -41,15 +46,21 @@ export default class ReactListView extends Component {
         Object.keys(data).map(k => {
         const header = data[k][headerAttName];
         const items  = data[k][itemsAttName];
+        _refi++;
+        const headerRef = makeHeaderRef();
+        const itemRef = makeItemRef();
+
         return (
           <li li={li} key={k}>    
             <ListHeader
-              ref={makeRef()}
+              ref={headerRef}
               header={header}
+              headerRef={headerRef}
               styles={listHeader}
-              handleToggle={this.handleToggle.bind(this, header)}
+              handleToggle={this.handleToggle.bind(this, headerRef)}
             />
             <ListItems
+             ref={itemRef}
              items={items}
              styles={listItems}
             />
@@ -62,7 +73,8 @@ export default class ReactListView extends Component {
     );
   }
 
-  handleToggle(header) {
-    console.log(header);
+  handleToggle(headerRef) {
+    console.log(headerRef);
+
   }
 }
