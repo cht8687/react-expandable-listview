@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
+import ListItem from './ListItem';
 
-export default class ListItem extends Component {
+export default class ListItemsManager extends Component {
   static propTypes = {
     items: PropTypes.array.isRequired,
     styles: PropTypes.object.isRequired
@@ -11,9 +12,12 @@ export default class ListItem extends Component {
     return (
       <span>
       {
-        Object.keys(items).map(index => {
+        Object.keys(items).map((index) => {
           return (
-            <span key={index} style={styles}>{items[index]}<br /></span>
+            <ListItem 
+              item={items[index]}
+              styles={styles}
+            />
           );
         })
       }

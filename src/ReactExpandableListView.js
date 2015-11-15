@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ListHeader from './lib/ListHeader';
-import ListItems from './lib/ListItems';
+import ListItemsManager from './lib/ListItemsManager';
 import * as Tools from './lib/Utility';
 
 export default class ReactListView extends Component {
@@ -60,7 +60,7 @@ export default class ReactListView extends Component {
               styles={listHeader}
               handleToggle={this.handleToggle.bind(this, headerRef)}
             />
-            <ListItems
+            <ListItemsManager
              ref={itemRef}
              items={items}
              styles={listItems}
