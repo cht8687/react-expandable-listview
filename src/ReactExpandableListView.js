@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ListHeader from './lib/ListHeader';
 import ListItemsManager from './lib/ListItemsManager';
 import * as Tools from './lib/Utility';
+import { Motion, spring } from "react-motion";
 
 export default class ReactListView extends Component {
   static propTypes = {
@@ -52,20 +53,37 @@ export default class ReactListView extends Component {
           const itemRef = makeItemRef();
 
           return (
-            <li li={li} key={k}>
-              <ListHeader
-                ref={headerRef}
-                header={header}
-                headerRef={headerRef}
-                styles={listHeader}
-                handleToggle={this.handleToggle.bind(this, headerRef)}
-              />
-              <ListItemsManager
-               ref={itemRef}
-               items={items}
-               styles={listItems}
-              />
-            </li>
+            <Motion
+              defaultStyle={{h: 0}}
+              style={{h: spring(110)}}>
+              {
+                ({h}) => (
+                  <div key={k}>
+                    <li li={li}>
+                      <ListHeader
+                        ref={headerRef}
+                        header={header}
+                        headerRef={headerRef}
+                        styles={listHeader}
+                        handleToggle={this.handleToggle.bind(this, headerRef)}
+                      />
+                      <div
+                        style={{
+                          display: `block`,
+                          overflow: `hidden`,
+                          height:`${h}`
+                          }}>
+                        <ListItemsManager
+                         ref={itemRef}
+                         items={items}
+                         styles={listItems}
+                        />
+                      </div>
+                    </li>
+                  </div>
+                )
+              }
+            </Motion>
           );
           })
         }
