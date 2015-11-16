@@ -15,6 +15,7 @@ export default class ListItemsManager extends Component {
         Object.keys(items).map((index) => {
           return (
             <ListItem 
+              key={index}
               item={items[index]}
               styles={styles}
             />
