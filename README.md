@@ -1,5 +1,5 @@
 # react-expandable-listview
-listview which can be expanded to show its children
+listview with headers with toggle expand using react-motion library.
 
 # This project is in working progress...
 
