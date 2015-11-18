@@ -3,20 +3,20 @@ import React, { Component, PropTypes } from 'react';
 export default class ListHeader extends Component {
   static propTypes = {
     header: PropTypes.string.isRequired,
-    headerRef: PropTypes.string.isRequired,
+    headerIndex: PropTypes.number.isRequired,
     styles: PropTypes.object.isRequired,
     handleToggle: PropTypes.func.isRequired
   };
 
   render() {
-    const { header, headerRef, styles } = this.props;
+    const { header, headerIndex, styles } = this.props;
     return (
-      <div ref="header" style={styles} onClick={this.handleClick.bind(this, headerRef)}>{header}</div>
+      <div ref="header" style={styles} onClick={this.handleClick.bind(this, headerIndex)}>{header}</div>
     );
   }  
 
-  handleClick(headerRef) {
+  handleClick(headerIndex) {
     const { handleToggle } = this.props;
-    handleToggle(headerRef);
+    handleToggle(headerIndex);
   }
 }

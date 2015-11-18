@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import ListHeader from './lib/ListHeader';
 import ListItemsManager from './lib/ListItemsManager';
-import * as Tools from './lib/Utility';
 import { Motion, spring } from "react-motion";
 
 export default class ReactListView extends Component {
@@ -14,23 +13,16 @@ export default class ReactListView extends Component {
 
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount() {
-
-  }
-
-  componentWillUnmount() {
-
-  }
-
-  componentDidUpdate() {
-
+    const { data } = this.props;
+    this.state = {
+      data
+    }
   }
 
   render() {
-    const { data, headerAttName, itemsAttName } = this.props;
+    const { headerAttName, itemsAttName } = this.props;
     const { styles: {outerDiv, ul, listHeader, listItems, li} } = this.props;
+    const { data } = this.state;
 
     let _refi = 0;
     let makeHeaderRef = () => {
@@ -45,10 +37,10 @@ export default class ReactListView extends Component {
       <div ref="listview" style={outerDiv}>
         <ul style={ul}>
         {
-          Object.keys(data).map(k => {
+          Object.keys(data).map((k, index) => {
           const header = data[k][headerAttName];
           const items  = data[k][itemsAttName];
-          let { isOpened } = data[k];
+          const { isOpened } = data[k];
           _refi++;
           const headerRef = makeHeaderRef();
           const itemRef = makeItemRef();
@@ -64,9 +56,9 @@ export default class ReactListView extends Component {
                       <ListHeader
                         ref={headerRef}
                         header={header}
-                        headerRef={headerRef}
+                        headerIndex={index}
                         styles={listHeader}
-                        handleToggle={this.handleToggle.bind(this, headerRef)}
+                        handleToggle={this.handleToggle.bind(this, index)}
                       />
                       <div
                         style={{
@@ -93,8 +85,14 @@ export default class ReactListView extends Component {
     );
   }
 
-  handleToggle(headerRef) {
-    console.log(Tools.returnListRef(headerRef));
+  handleToggle(headerIndex) {
+    let { data } = this.state;
+    let dataCopy = data;
+    dataCopy[headerIndex].isOpened = !dataCopy[headerIndex].isOpened;
+    const newData = Object.assign({}, dataCopy);
 
+    this.setState(
+      newData
+    )
   }
 }

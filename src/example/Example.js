@@ -54,7 +54,7 @@ class App extends Component {
 const DATALIST = [
   {
     headerName : "ListA",
-    ispened: true,
+    isOpened: true,
     items : [{
       title : "items1"
     }, {
