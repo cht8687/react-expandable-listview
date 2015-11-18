@@ -9,7 +9,7 @@ export default class ReactListView extends Component {
     data: PropTypes.array.isRequired,
     headerAttName: PropTypes.string.isRequired,
     itemsAttName: PropTypes.string.isRequired,
-    styles: PropTypes.object.isRequired,
+    styles: PropTypes.object.isRequired
   }
 
   constructor(props) {
@@ -48,6 +48,7 @@ export default class ReactListView extends Component {
           Object.keys(data).map(k => {
           const header = data[k][headerAttName];
           const items  = data[k][itemsAttName];
+          let { isOpened } = data[k];
           _refi++;
           const headerRef = makeHeaderRef();
           const itemRef = makeItemRef();
@@ -55,7 +56,7 @@ export default class ReactListView extends Component {
           return (
             <Motion
               defaultStyle={{h: 0}}
-              style={{h: spring(110)}}>
+              style={{h: spring(isOpened ? 110 : 0)}}>
               {
                 ({h}) => (
                   <div key={k}>
