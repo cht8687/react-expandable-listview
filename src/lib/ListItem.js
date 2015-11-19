@@ -8,9 +8,12 @@ export default class ListItem extends Component {
   };
 
   render() {
-    const { item, styles } = this.props;
+    const { item, styles: {img}  } = this.props;
     return (
-      <span style={styles}>{item}<br /></span>
+      <span>
+        <img style={styles} src=""></img>
+        <span>{item}<br /></span>
+      </span>
     );
   }
 }

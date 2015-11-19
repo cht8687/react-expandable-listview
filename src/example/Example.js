@@ -1,12 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-import ReactExpandableListView from '..';
+import Inknockknock from '..';
 
 let styles = {
   outerDiv: {
-    height: '400px',
+    height: '',
     overflowY: 'auto',
     outline: '1px dashed blue',
-    width: '400px',
+    width: '100%',
   },
 
   ul: {
@@ -15,22 +15,15 @@ let styles = {
     padding: '0'
   },
 
-  fixedPosition: {
-    position : 'fixed',
-    width : '383px',
-    top: '0px'
+  li: {
+
   },
 
-  listHeader: {
-    width: '383px',
-    height: '20px',
-    background: 'orange',
-    color: 'white'
-  },
+  img: {
+    background: 'red'
+  }
 
-  listItems: {
-    color: 'blue'
-  },
+
 };
 
 class App extends Component {
@@ -41,134 +34,27 @@ class App extends Component {
   render() {
    const { data } = this.props;
     return (
-      <ReactExpandableListView 
+      <Inknockknock 
         data={data} 
-        headerAttName="headerName"
-        itemsAttName="items" 
         styles={styles}
       />
     );
   }
 }
 
-const DATALIST = [
+const TotalEmployees = [
   {
-    headerName : "ListA",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  }, {
-    headerName : "ListB",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  },{
-    headerName : "ListC",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  },{
-    headerName : "ListD",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  },{
-    headerName : "ListE",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  },{
-    headerName : "ListF",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    }]
-  },{
-    headerName : "ListG",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  },{
-    headerName : "ListH",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    }]
-  }
+    address: "O2-OS-32-3D-KS-KD",
+    name: "Robert"
+  },
+  {
+    address: "ds-sf-3s-df-3d-df",
+    name: "Mac"
+  },
+  {
+    address: "kl-es-3s-ds-cs-kl",
+    name: "Joel"
+  },
 ];
 
-React.render(<App data= {DATALIST} />, document.body);
+React.render(<App data= {TotalEmployees} />, document.body);
