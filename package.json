@@ -1,7 +1,6 @@
 {
-  "name": "InKnockKnock",
-  "version": "0.1.0",
   "name": "react-expandable-listview",
+  "version": "0.1.1",
   "description": "listview which can be expanded to show its children",
   "main": "dist/index.js",
   "scripts": {
@@ -12,12 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cht8687/InKnockKnock.git"
+    "url": "git+https://github.com/cht8687/react-expandable-listview.git"
   },
   "keywords": [
     "react",
     "react-component",
-    "component"
+    "component",
+    "react-motion",
+    "react-listview",
+    "listview",
+    "expandable"
   ],
   "files": [
     "dist"
@@ -25,9 +28,9 @@
   "author": "Robert Chang <cht8687@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cht8687/InKnockKnock.git/issues"
+    "url": "https://github.com/cht8687/react-expandable-listview/issues"
   },
-  "homepage": "https://github.com/cht8687/InKnockKnock.git",
+  "homepage": "https://github.com/cht8687/react-expandable-listview#readme",
   "peerDependencies": {
     "react": "^0.13.3"
   },

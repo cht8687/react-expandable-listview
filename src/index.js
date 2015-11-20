@@ -1,3 +1,3 @@
-import Inknockknock from './InKnocknock';
-export default Inknockknock;
+import ReactExpandableListView from './ReactExpandableListView';
+export default ReactExpandableListView;
 
