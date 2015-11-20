@@ -1,7 +1,8 @@
 {
   "name": "InKnockKnock",
-  "version": "0.0.1",
-  "description": "A ultimate controlling system",
+  "version": "0.1.0",
+  "name": "react-expandable-listview",
+  "description": "listview which can be expanded to show its children",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "parallelshell -w \"npm run build:dist -s\" \"npm run build:example -s\" \"npm run build:bower -s\"",
