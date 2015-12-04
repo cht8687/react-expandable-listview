@@ -1,6 +1,6 @@
 {
   "name": "react-expandable-listview",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "listview which can be expanded to show its children",
   "main": "dist/index.js",
   "scripts": {
@@ -32,7 +32,8 @@
   },
   "homepage": "https://github.com/cht8687/react-expandable-listview#readme",
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": "^0.14.0",
+    "react-motion": "^0.3.1"
   },
   "devDependencies": {
     "babel": "^5.8.23",
@@ -45,7 +46,6 @@
     "html-webpack-plugin": "^1.6.1",
     "parallelshell": "^2.0.0",
     "react-hot-loader": "^1.2.9",
-    "react-motion": "^0.3.1",
     "rimraf": "^2.4.3",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1",
