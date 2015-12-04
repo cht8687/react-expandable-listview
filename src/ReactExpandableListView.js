@@ -46,7 +46,7 @@ export default class ReactListView extends Component {
           const itemRef = makeItemRef();
 
           return (
-            <Motion
+             <Motion
               defaultStyle={{h: 0}}
               style={{h: spring(isOpened ? 110 : 0)}}>
               {
@@ -64,7 +64,8 @@ export default class ReactListView extends Component {
                         style={{
                           display: `block`,
                           overflow: `hidden`,
-                          height:`${h}`
+                          height:`${h}`,
+                          ...listItems
                           }}>
                         <ListItemsManager
                          ref={itemRef}

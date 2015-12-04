@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { render } from 'react-dom';
 import ReactExpandableListView from '..';
 import { DATA } from './const';
 
@@ -23,7 +24,6 @@ let styles = {
   },
 
   listHeader: {
-    width: '383px',
     height: '20px',
     background: 'orange',
     color: 'white'
@@ -52,4 +52,9 @@ class App extends Component {
   }
 }
 
-React.render(<App data= {DATA} />, document.body);
+
+const appRoot = document.createElement('div');
+appRoot.id = 'app';
+document.body.appendChild(appRoot);
+
+render(<App data= {DATA} />, appRoot);

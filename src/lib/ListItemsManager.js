@@ -12,11 +12,11 @@ export default class ListItemsManager extends Component {
     return (
       <span>
       {
-        Object.keys(items).map((index) => {
+        [...items].map((item, index) => {
           return (
             <ListItem 
               key={index}
-              item={items[index]}
+              item={item.title}
               styles={styles}
             />
           );

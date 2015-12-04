@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 
 export default class ListItem extends Component {
   static propTypes = {
-    item: PropTypes.object.isRequired,
+    item: PropTypes.string.isRequired,
     styles: PropTypes.object.isRequired
   };
 
