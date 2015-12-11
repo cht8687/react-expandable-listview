@@ -21,7 +21,7 @@ export default class ReactListView extends Component {
 
   render() {
     const { headerAttName, itemsAttName } = this.props;
-    const { styles: {outerDiv, ul, listHeader, listItems, li} } = this.props;
+    const { styles: {outerDiv, ul, listHeader, listItems } } = this.props;
     const { data } = this.state;
 
     let _refi = 0;
@@ -47,12 +47,13 @@ export default class ReactListView extends Component {
 
           return (
              <Motion
+              key={index}
               defaultStyle={{h: 0}}
               style={{h: spring(isOpened ? 110 : 0)}}>
               {
                 ({h}) => (
                   <div key={k}>
-                    <li li={li}>
+                    <li>
                       <ListHeader
                         ref={headerRef}
                         header={header}
