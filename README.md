@@ -17,6 +17,9 @@ $ npm install --save react-expandable-listview
 
 [http://cht8687.github.io/react-expandable-listview/example/](http://cht8687.github.io/react-expandable-listview/example/)
 
+## Example Code
+
+[https://github.com/cht8687/react-expandable-listview/tree/master/src/example](https://github.com/cht8687/react-expandable-listview/tree/master/src/example)
 
 ## Usage
 
