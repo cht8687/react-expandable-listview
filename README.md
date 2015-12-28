@@ -1,7 +1,7 @@
 # React expandable listview
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/help)
 
-<big><h1 align="center">React hover --- Turn anything to hover component</h1></big>
+<big><h1 align="center">React expandable listview</h1></big>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/react-expandable-listview">
