@@ -1,6 +1,6 @@
 {
   "name": "react-expandable-listview",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "listview which can be expanded to show its children",
   "main": "dist/index.js",
   "scripts": {
