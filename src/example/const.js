@@ -14,7 +14,8 @@ export const DATA = [
       title : "items5"
     },{
       title : "items6"
-    }]
+    }],
+    height: 120
   }, {
     headerName : "ListB",
     isOpened: true,
@@ -30,7 +31,8 @@ export const DATA = [
       title : "items5"
     },{
       title : "items6"
-    }]
+    }],
+    height: 120
   },{
     headerName : "ListC",
     isOpened: true,
@@ -46,7 +48,9 @@ export const DATA = [
       title : "items5"
     },{
       title : "items6"
-    }]
+    }],
+    height: 120
+
   },{
     headerName : "ListD",
     isOpened: true,
@@ -62,7 +66,8 @@ export const DATA = [
       title : "items5"
     },{
       title : "items6"
-    }]
+    }],
+    height: 100
   },{
     headerName : "ListE",
     isOpened: true,
@@ -78,7 +83,8 @@ export const DATA = [
       title : "items5"
     },{
       title : "items6"
-    }]
+    }],
+    height: 100
   },{
     headerName : "ListF",
     isOpened: true,
@@ -88,7 +94,8 @@ export const DATA = [
       title : "items2"
     }, {
       title : "items3"
-    }]
+    }],
+    height: 100
   },{
     headerName : "ListG",
     isOpened: true,
@@ -104,7 +111,8 @@ export const DATA = [
       title : "items5"
     },{
       title : "items6"
-    }]
+    }],
+    height: 100
   },{
     headerName : "ListH",
     isOpened: true,
@@ -114,6 +122,7 @@ export const DATA = [
       title : "items2"
     }, {
       title : "items3"
-    }]
+    }],
+    height: 100
   }
 ];

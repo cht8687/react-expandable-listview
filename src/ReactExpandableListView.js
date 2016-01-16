@@ -39,6 +39,7 @@ export default class ReactListView extends Component {
           const header = data[k][headerAttName];
           const items  = data[k][itemsAttName];
           const { isOpened } = data[k];
+          const { height } = data[k];
           _refi++;
           const headerRef = makeHeaderRef();
           const itemRef = makeItemRef();
@@ -47,7 +48,7 @@ export default class ReactListView extends Component {
              <Motion
               key={index}
               defaultStyle={{h: 0}}
-              style={{h: spring(isOpened ? 110 : 0)}}>
+              style={{h: spring(isOpened ? height : 0)}}>
               {
                 ({h}) => (
                   <div key={k}>

@@ -76,25 +76,39 @@ The component accepts three props.
 ```js
 const DATALIST = [
 {
- 	headerName : "ListA",
- 	isOpened: true,
+    headerName : "ListG",
+    isOpened: true,
     items : [{
       title : "items1"
     }, {
       title : "items2"
-    }]
-},
-{
- 	headerName : "ListB",
- 	isOpened: true,
+    }, {
+      title : "items3"
+    },{
+      title : "items4"
+    },{
+      title : "items5"
+    },{
+      title : "items6"
+    }],
+    height: 100
+  },{
+    headerName : "ListH",
+    isOpened: true,
     items : [{
       title : "items1"
     }, {
       title : "items2"
-    }]
-}
+    }, {
+      title : "items3"
+    }],
+    height: 100
+  }
 ];
 ```
+
+Note `height` varible defines the height you want each list to be like.
+You can set different height data to suit the content of each section.
 
 #### `headerAttName`: PropTypes.string.isRequired
 
