@@ -112,20 +112,17 @@ In above example, it's `items`.
 The CSS is flexible, commented and made to be easily customized.
 
 There is an CSS file in the root level you can include it in your project.
-[CSS code](react-expandable-listview/react-expandable-listview.css).
-
+[CSS code](https://github.com/cht8687/react-expandable-listview/tree/master/react-expandable-listview.css).
 
 
 ## Development
 
 ```
-$ git clone git@github.com:cht8687/react-expandable-listview.git
+$ git clone https://github.com/cht8687/react-expandable-listview.git
 $ cd react-expandable-listview
 $ npm install
 $ webpack-dev-server
 ```
-
-*tip:* If you have already had webpack-dev-server running, you might have EADDRINUSE error, please ensure the port is not in use.
 
 Then
 
