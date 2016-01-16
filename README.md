@@ -57,18 +57,19 @@ $ npm install --save react-expandable-listview
 
 [https://github.com/cht8687/react-expandable-listview/tree/master/src/example](https://github.com/cht8687/react-expandable-listview/tree/master/src/example)
 
-## Usage
+## API
+
+#### &lt;ReactExpandableListView />
 
 ```js
 <ReactExpandableListView 
         data={data} 
         headerAttName="headerName"
         itemsAttName="items" 
-        styles={styles}
       />
 ```
 
-## Options
+The component accepts three props.
 
 #### `data`: PropTypes.array.isRequired
 
@@ -97,51 +98,22 @@ const DATALIST = [
 
 #### `headerAttName`: PropTypes.string.isRequired
 
-variable name of header in your `data` object.
+Variable name of header in your `data` object.
 In above example, it's `headerName`.
 
 #### `itemsAttName`: PropTypes.string.isRequired
 
-variable name which hold items data in your `data` object.
+Variable name which hold items data in your `data` object.
 In above example, it's `items`.
 
-#### `styles`: PropTypes.object.isRequired
 
-```js
-let styles = {
-   outerDiv: {
-    height: '400px',
-    overflowY: 'auto',
-    outline: '1px dashed blue',
-    width: '400px',
-  },
+## Styling
 
-  ul: {
-    margin: '0px',
-    listStyleType: 'none',
-    padding: '0'
-  },
+The CSS is flexible, commented and made to be easily customized.
 
-  fixedPosition: {
-    position : 'fixed',
-    width : '383px',
-    top: '0px'
-  },
+There is an CSS file in the root level you can include it in your project.
+[CSS code](react-expandable-listview/react-expandable-listview.css).
 
-  listHeader: {
-    width: '383px',
-    height: '20px',
-    background: 'orange',
-    color: 'white'
-  },
-
-  listItems: {
-    color: 'blue'
-  },
-};
-```
-
-`outerDiv`, `ul`, `fixedPosition`, `listHeader`, `listItems` are required, you can modify the CSS to meet your needs.
 
 
 ## Development
