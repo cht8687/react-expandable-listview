@@ -3,12 +3,11 @@ import ListItem from './ListItem';
 
 export default class ListItemsManager extends Component {
   static propTypes = {
-    items: PropTypes.array.isRequired,
-    styles: PropTypes.object.isRequired
+    items: PropTypes.array.isRequired
   };
 
   render() {
-    const { items, styles } = this.props;
+    const { items } = this.props;
     return (
       <span>
       {
@@ -17,7 +16,6 @@ export default class ListItemsManager extends Component {
             <ListItem 
               key={index}
               item={item.title}
-              styles={styles}
             />
           );
         })

@@ -1,0 +1,29 @@
+
+.expandable-listview_outerDiv {
+  height: 400px;
+  overflow-y: auto;
+  outline: 1px dashed blue;
+  width: 400px;
+}
+
+.expandable-listview_ul {
+  margin: 0px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.expandable-listview_fixedPosition {
+  position : fixed;
+  width : 383px;
+  top: 0px;
+}
+
+.expandable-listview_listHeader {
+  height: 20px;
+  background: orange;
+  color: white;
+}
+
+.expandable-listview_listItems {
+  color: blue;
+}

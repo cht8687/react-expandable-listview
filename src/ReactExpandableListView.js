@@ -7,8 +7,7 @@ export default class ReactListView extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
     headerAttName: PropTypes.string.isRequired,
-    itemsAttName: PropTypes.string.isRequired,
-    styles: PropTypes.object.isRequired
+    itemsAttName: PropTypes.string.isRequired
   }
 
   constructor(props) {
@@ -21,7 +20,6 @@ export default class ReactListView extends Component {
 
   render() {
     const { headerAttName, itemsAttName } = this.props;
-    const { styles: {outerDiv, ul, listHeader, listItems } } = this.props;
     const { data } = this.state;
 
     let _refi = 0;
@@ -34,8 +32,8 @@ export default class ReactListView extends Component {
     };
 
     return (
-      <div ref="listview" style={outerDiv}>
-        <ul style={ul}>
+      <div ref="listview" className="expandable-listview_outerDiv">
+        <ul className="expandable-listview_ul">
         {
           Object.keys(data).map((k, index) => {
           const header = data[k][headerAttName];
@@ -58,20 +56,19 @@ export default class ReactListView extends Component {
                         ref={headerRef}
                         header={header}
                         headerIndex={index}
-                        styles={listHeader}
+                        className="expandable-listview_listHeader"
                         handleToggle={this.handleToggle.bind(this, index)}
                       />
                       <div
                         style={{
                           display: `block`,
                           overflow: `hidden`,
-                          height:`${h}`,
-                          ...listItems
+                          height:`${h}`
                           }}>
                         <ListItemsManager
                          ref={itemRef}
                          items={items}
-                         styles={listItems}
+                         className="expandable-listview_listItems"
                         />
                       </div>
                     </li>
