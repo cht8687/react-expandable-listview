@@ -4,6 +4,11 @@
 <big><h1 align="center">React expandable listview</h1></big>
 
 <p align="center">
+  <a href="https://circleci.com/gh/cht8687/react-expandable-listview">
+    <img src="https://circleci.com/gh/cht8687/react-expandable-listview.svg?style=shield"
+         alt="Circle CI">
+  </a>
+
   <a href="https://www.npmjs.com/package/react-expandable-listview">
     <img src="https://img.shields.io/npm/v/react-expandable-listview.svg?style=flat-square"
          alt="NPM Version">
