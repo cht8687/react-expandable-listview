@@ -152,3 +152,5 @@ open http://localhost:8080/webpack-dev-server/
 ## License
 
 MIT
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)

@@ -1,3 +1,2 @@
-import ReactExpandableListView from './ReactExpandableListView';
-export default ReactExpandableListView;
-
+import ReactExpandableListView from './ReactExpandableListView'
+export default ReactExpandableListView

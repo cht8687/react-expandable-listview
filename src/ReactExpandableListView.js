@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import ListHeader from './lib/ListHeader';
-import ListItemsManager from './lib/ListItemsManager';
-import { Motion, spring } from "react-motion";
+import React, { Component, PropTypes } from 'react'
+import ListHeader from './lib/ListHeader'
+import ListItemsManager from './lib/ListItemsManager'
+import { Motion, spring } from 'react-motion'
 
 export default class ReactListView extends Component {
   static propTypes = {
@@ -10,46 +10,46 @@ export default class ReactListView extends Component {
     itemsAttName: PropTypes.string.isRequired
   }
 
-  constructor(props) {
-    super(props);
-    const { data } = this.props;
+  constructor (props) {
+    super(props)
+    const { data } = this.props
     this.state = {
       data
     }
   }
 
-  render() {
-    const { headerAttName, itemsAttName } = this.props;
-    const { data } = this.state;
+  render () {
+    const { headerAttName, itemsAttName } = this.props
+    const { data } = this.state
 
-    let _refi = 0;
+    let _refi = 0
     let makeHeaderRef = () => {
-      return `ListHeader-${_refi}`;
-    };
+      return `ListHeader-${_refi}`
+    }
 
     let makeItemRef = () => {
-      return `ListItem-${_refi}`;
-    };
+      return `ListItem-${_refi}`
+    }
 
     return (
       <div ref="listview" className="expandable-listview_outerDiv">
         <ul className="expandable-listview_ul">
         {
           Object.keys(data).map((k, index) => {
-          const header = data[k][headerAttName];
-          const items  = data[k][itemsAttName];
-          const { isOpened } = data[k];
-          const { height } = data[k];
-          _refi++;
-          const headerRef = makeHeaderRef();
-          const itemRef = makeItemRef();
+            const header = data[k][headerAttName]
+            const items = data[k][itemsAttName]
+            const { isOpened } = data[k]
+            const { height } = data[k]
+            _refi++
+            const headerRef = makeHeaderRef()
+            const itemRef = makeItemRef()
 
-          return (
-             <Motion
-              key={index}
-              defaultStyle={{h: 0}}
-              style={{h: spring(isOpened ? height : 0)}}>
-              {
+            return (
+              <Motion
+                key={index}
+                defaultStyle={{h: 0}}
+                style={{h: spring(isOpened ? height : 0)}}>
+                {
                 ({h}) => (
                   <div key={k}>
                     <li>
@@ -62,34 +62,34 @@ export default class ReactListView extends Component {
                       />
                       <div
                         style={{
-                          display: `block`,
-                          overflow: `hidden`,
-                          height:`${h}`
-                          }}>
+                          display: 'block',
+                          overflow: 'hidden',
+                          height: `${h}`
+                        }}>
                         <ListItemsManager
-                         ref={itemRef}
-                         items={items}
-                         className="expandable-listview_listItems"
+                          ref={itemRef}
+                          items={items}
+                          className="expandable-listview_listItems"
                         />
                       </div>
                     </li>
                   </div>
                 )
               }
-            </Motion>
-          );
+              </Motion>
+          )
           })
         }
         </ul>
       </div>
-    );
+    )
   }
 
-  handleToggle(headerIndex) {
-    let { data } = this.state;
-    let dataCopy = data;
-    dataCopy[headerIndex].isOpened = !dataCopy[headerIndex].isOpened;
-    const newData = Object.assign({}, dataCopy);
+  handleToggle (headerIndex) {
+    let { data } = this.state
+    let dataCopy = data
+    dataCopy[headerIndex].isOpened = !dataCopy[headerIndex].isOpened
+    const newData = Object.assign({}, dataCopy)
 
     this.setState(
       newData
