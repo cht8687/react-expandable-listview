@@ -21,7 +21,6 @@ export default class ReactListView extends Component {
   render () {
     const { headerAttName, itemsAttName } = this.props
     const { data } = this.state
-
     let _refi = 0
     let makeHeaderRef = () => {
       return `ListHeader-${_refi}`
