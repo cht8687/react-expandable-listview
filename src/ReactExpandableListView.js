@@ -85,11 +85,8 @@ export default class ReactListView extends Component {
   }
 
   handleToggle (headerIndex) {
-    let { data } = this.state
-    let dataCopy = data
-    dataCopy[headerIndex].isOpened = !dataCopy[headerIndex].isOpened
-    const newData = Object.assign({}, dataCopy)
-
+    let newData = Object.assign({}, this.state.data)
+    newData[headerIndex].isOpened = !newData[headerIndex].isOpened
     this.setState(
       newData
     )
