@@ -45,6 +45,11 @@
 
 ![React expandable listview](src/example/react-expandable-listview.gif)
 
+
+## Philosophy
+
+>You don't need jQuery to do this...
+
 ## Installation
 
 ### npm
