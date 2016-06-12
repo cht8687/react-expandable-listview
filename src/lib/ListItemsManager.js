@@ -6,7 +6,7 @@ export default class ListItemsManager extends Component {
     items: PropTypes.array.isRequired
   }
 
-  render() {
+  render () {
     const { items } = this.props
     return (
       <span>
