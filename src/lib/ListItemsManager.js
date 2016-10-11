@@ -13,10 +13,9 @@ export default class ListItemsManager extends Component {
       {
         [...items].map((item, index) => {
           return (
-            <ListItem
-              key={index}
-              item={item.title}
-            />
+            <ListItem key={index}>
+              {item}
+            </ListItem>
           )
         })
       }
