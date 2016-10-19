@@ -1,14 +1,18 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
 
-export default class ListItem extends Component {
-  static propTypes = {
-    item: PropTypes.string.isRequired
+export default class ListItem extends React.Component {
+  static get propTypes() {
+    return {
+      children: React.PropTypes.object,
+    };
   }
 
   render () {
-    const { item } = this.props
     return (
-      <span className="expandable-listview_listItems">{item}<br /></span>
+      <span className="expandable-listview_listItems">
+        {this.props.children}
+        <br />
+      </span>
     )
   }
 }
