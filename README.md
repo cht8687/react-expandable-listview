@@ -2,6 +2,7 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/help)
 
 <big><h1 align="center">React expandable listview</h1></big>
+     <h2 align="center">Rend components or plain object in an expandable way!</h2>
 
 <p align="center">
   <a href="https://circleci.com/gh/cht8687/react-expandable-listview">
@@ -83,11 +84,16 @@ The component accepts three props.
 
 #### `data`: PropTypes.array.isRequired
 
+* note that `isReactComponent` is used to select if you want to render a react object or not.
+
+### Render plain object
+
 ```js
 const DATALIST = [
 {
     headerName : "ListG",
     isOpened: true,
+    isReactComponent: false,
     items : [{
       title : "items1"
     }, {
@@ -105,6 +111,7 @@ const DATALIST = [
   },{
     headerName : "ListH",
     isOpened: true,
+    isReactComponent: false,
     items : [{
       title : "items1"
     }, {
@@ -116,6 +123,102 @@ const DATALIST = [
   }
 ];
 ```
+
+### Render react component 
+
+If you want to render a react component, for example, a menu object, you can set `isReactComponent` to `true`:
+
+```js
+export default class Menu extends React.Component {
+  static get menuItems() {
+    return [
+      {
+        headerName: 'Products',
+        isOpened: false,
+        height: 100,
+        isReactComponent: true,
+        items: [
+          (
+          <Link
+            to="admin/products/all"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            All
+          </Link>
+          ),
+          (
+          <Link
+            to="admin/products/expired"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Expired
+          </Link>
+          ),
+          (
+          <Link
+            to="admin/products/submitted"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Submitted
+          </Link>
+          ),
+        ],
+      },
+      {
+        headerName: 'Promotions',
+        isOpened: false,
+        height: 100,
+        isReactComponent: true,
+        items: [
+          (
+          <Link
+            to="admin/promotions/active"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Active
+          </Link>
+          ),
+       ],
+      },
+      {
+        headerName: 'Settings',
+        isOpened: false,
+        height: 100,
+        isReactComponent: true,
+        items: [
+          (
+          <Link
+            to="admin/settings/all"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Al
+          </Link>
+          ),
+        ],
+      },
+    ];
+  }
+
+  render() {
+    return (
+      <div id="admin-menu">
+        <ReactExpandableListView
+          data={this.constructor.menuItems}
+          headerAttName="headerName"
+          itemsAttName="items"
+        />
+      </div>
+    );
+  }
+}
+
+```
+
 
 Note `height` varible defines the height you want each list to be like.
 You can set different height data to suit the content of each section.

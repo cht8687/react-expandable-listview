@@ -7,7 +7,7 @@ export default class ListItem extends React.Component {
       isReactComponent: React.PropTypes.bool
     };
   }
-  
+
   render () {
     const { isReactComponent } = this.props;
     return (

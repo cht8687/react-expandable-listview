@@ -2,7 +2,7 @@ export const DATA = [
   {
     headerName: 'ListA',
     isOpened: true,
-    isReactComponent: false,
+    // isReactComponent: false,
     items: [{
       title: 'items1'
     },
@@ -26,7 +26,7 @@ export const DATA = [
   {
     headerName: 'ListB is bravo',
     isOpened: true,
-    isReactComponent: false,
+    // isReactComponent: false,
     items: [{
       title: 'items1'
     },
@@ -50,7 +50,7 @@ export const DATA = [
   {
     headerName: 'ListC is Charlie',
     isOpened: true,
-    isReactComponent: false,
+    // isReactComponent: false,
     items: [{
       title: 'items1'
     },
