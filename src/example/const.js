@@ -2,6 +2,7 @@ export const DATA = [
   {
     headerName: 'ListA',
     isOpened: true,
+    isReactComponent: false,
     items: [{
       title: 'items1'
     },
@@ -25,6 +26,7 @@ export const DATA = [
   {
     headerName: 'ListB is bravo',
     isOpened: true,
+    isReactComponent: false,
     items: [{
       title: 'items1'
     },
@@ -48,6 +50,7 @@ export const DATA = [
   {
     headerName: 'ListC is Charlie',
     isOpened: true,
+    isReactComponent: false,
     items: [{
       title: 'items1'
     },
@@ -71,6 +74,7 @@ export const DATA = [
   {
     headerName: 'ListD is Dynamic',
     isOpened: true,
+    isReactComponent: false,
     items: [{
       title: 'items1'
     },
@@ -94,6 +98,7 @@ export const DATA = [
   {
     headerName: 'ListE',
     isOpened: true,
+    isReactComponent: false,
     items: [{
       title: 'items1'
     },
