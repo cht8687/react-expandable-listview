@@ -36,7 +36,9 @@ var ListItemsManager = function (_Component) {
   _createClass(ListItemsManager, [{
     key: 'render',
     value: function render() {
-      var items = this.props.items;
+      var _props = this.props;
+      var items = _props.items;
+      var isReactComponent = _props.isReactComponent;
 
       return _react2.default.createElement(
         'span',
@@ -44,7 +46,7 @@ var ListItemsManager = function (_Component) {
         [].concat(_toConsumableArray(items)).map(function (item, index) {
           return _react2.default.createElement(
             _ListItem2.default,
-            { key: index },
+            { key: index, isReactComponent: isReactComponent },
             item
           );
         })
@@ -56,7 +58,8 @@ var ListItemsManager = function (_Component) {
 }(_react.Component);
 
 ListItemsManager.propTypes = {
-  items: _react.PropTypes.array.isRequired
+  items: _react.PropTypes.array.isRequired,
+  isReactComponent: _react.PropTypes.bool
 };
 exports.default = ListItemsManager;
 //# sourceMappingURL=ListItemsManager.js.map

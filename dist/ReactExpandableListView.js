@@ -72,6 +72,7 @@ var ReactListView = function (_Component) {
           Object.keys(data).map(function (k, index) {
             var header = data[k][headerAttName];
             var items = data[k][itemsAttName];
+            var isReactComponent = data[k].isReactComponent;
             var isOpened = data[k].isOpened;
             var height = data[k].height;
 
@@ -111,6 +112,7 @@ var ReactListView = function (_Component) {
                       _react2.default.createElement(_ListItemsManager2.default, {
                         ref: itemRef,
                         items: items,
+                        isReactComponent: isReactComponent,
                         className: 'expandable-listview_listItems'
                       })
                     )

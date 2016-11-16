@@ -30,10 +30,12 @@ var ListItem = function (_React$Component) {
   _createClass(ListItem, [{
     key: "render",
     value: function render() {
+      var isReactComponent = this.props.isReactComponent;
+
       return _react2.default.createElement(
         "span",
         { className: "expandable-listview_listItems" },
-        this.props.children,
+        isReactComponent ? this.props.children : this.props.children.title,
         _react2.default.createElement("br", null)
       );
     }
@@ -41,7 +43,8 @@ var ListItem = function (_React$Component) {
     key: "propTypes",
     get: function get() {
       return {
-        children: _react2.default.PropTypes.object
+        children: _react2.default.PropTypes.object,
+        isReactComponent: _react2.default.PropTypes.bool
       };
     }
   }]);
