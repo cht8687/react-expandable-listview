@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import ListItem from './ListItem'
+import PropTypes from 'prop-types'
 
 export default class ListItemsManager extends Component {
   static propTypes = {

@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import ListHeader from './lib/ListHeader'
 import ListItemsManager from './lib/ListItemsManager'
 import { Motion, spring } from 'react-motion'
+import PropTypes from 'prop-types'
 
 export default class ReactListView extends Component {
   static propTypes = {

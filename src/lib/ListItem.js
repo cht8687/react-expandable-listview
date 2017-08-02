@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default class ListItem extends React.Component {
   static get propTypes() {
     return {
-      children: React.PropTypes.object,
-      isReactComponent: React.PropTypes.bool
+      children: PropTypes.object,
+      isReactComponent: PropTypes.bool
     };
   }
 
